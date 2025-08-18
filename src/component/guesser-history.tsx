@@ -23,7 +23,7 @@ const GuesserHistoryContainer = styled.div`
         }
     }
     .guess-status {
-        margin-bottom: 4px;
+        margin-bottom: 8px;
     }
 `;
 export type GuessHistory = {
@@ -42,7 +42,10 @@ export const GuesserHistory = memo(({
             /** Reverse display for better clarity */
             const { guessList, status, id } = list[list.length - index - 1];
             return <div key={id} className={mergeClass('history-entry', index === 0 ? 'current-entry' : '')}>
-                <div className="guess-status">{GuessStatusMap[status].label}</div>
+                <div className="guess-status">
+                    {GuessStatusMap[status].label}
+                    {guessList.length > 0 ? ` (${guessList.length} guess)` : ''}
+                </div>
                 <div className="guess-list">
                     {guessList.length === 0 && <div>You did not make a guess.</div>}
                     {guessList.map((_, index, list) => {
