@@ -302,9 +302,9 @@ Error generating stack: `+a.message+`
         }
     }
     .guess-status {
-        margin-bottom: 4px;
+        margin-bottom: 8px;
     }
-`,W_=C.memo(({historyList:t})=>me.jsx(Z_,{className:"history-list",children:t.map((r,i,l)=>{const{guessList:u,status:s,id:d}=l[l.length-i-1];return me.jsxs("div",{className:ph("history-entry",i===0?"current-entry":""),children:[me.jsx("div",{className:"guess-status",children:F_[s].label}),me.jsxs("div",{className:"guess-list",children:[u.length===0&&me.jsx("div",{children:"You did not make a guess."}),u.map((v,g,h)=>{const{id:m,letterList:y}=h[h.length-g-1];return me.jsx("div",{children:me.jsx(yh,{letterList:y,compact:!0})},m)})]})]},d)})})),Xu=(t,r)=>{const i=r.padEnd(to," "),u=[...(typeof t=="string"?t:(t??[]).map(s=>s[0]??"").join("")).padEnd(to," ").toLocaleUpperCase()].slice(0,to);return{value:u.join(""),letterList:sS(u,i)}},fS=da.div`
+`,W_=C.memo(({historyList:t})=>me.jsx(Z_,{className:"history-list",children:t.map((r,i,l)=>{const{guessList:u,status:s,id:d}=l[l.length-i-1];return me.jsxs("div",{className:ph("history-entry",i===0?"current-entry":""),children:[me.jsxs("div",{className:"guess-status",children:[F_[s].label,u.length>0?` (${u.length} guess)`:""]}),me.jsxs("div",{className:"guess-list",children:[u.length===0&&me.jsx("div",{children:"You did not make a guess."}),u.map((v,g,h)=>{const{id:m,letterList:y}=h[h.length-g-1];return me.jsx("div",{children:me.jsx(yh,{letterList:y,compact:!0})},m)})]})]},d)})})),Xu=(t,r)=>{const i=r.padEnd(to," "),u=[...(typeof t=="string"?t:(t??[]).map(s=>s[0]??"").join("")).padEnd(to," ").toLocaleUpperCase()].slice(0,to);return{value:u.join(""),letterList:sS(u,i)}},fS=da.div`
     input {
         width: 15rem;
     }
