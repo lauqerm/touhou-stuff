@@ -120,7 +120,6 @@ export const Answer = ({
     highlight,
     onLetterClick,
 }: Answer) => {
-    console.log("🚀 ~ Answer ~ letterList:", letterList);
     return <AnwserContainer className={mergeClass("answer-container", compact ? 'answer-compact' : '')}>
         {letterList.map(({ key, letter, status, index }) => {
             return <AnswerLetter key={key}

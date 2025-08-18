@@ -129,7 +129,6 @@ export const GuesserModule = () => {
 
     const renew = useCallback(() => {
         const nextResult = NameList[Math.floor(Math.random() * NameList.length)];
-        console.log("🚀 ~ App ~ nextResult:", nextResult);
         setResult(nextResult);
         setHistoryList(historyList => {
             const nextHistoryList: GuessHistory[] = [

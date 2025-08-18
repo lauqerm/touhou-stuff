@@ -13,7 +13,13 @@ function App() {
         }
 
         if (targetModule.length > 0) setModule(targetModule);
-        else setModule('guesser');
+        else {
+            const url = new URL(window.location.href);
+
+            url.searchParams.set("module", 'guesser');
+            window.history.pushState(null, '', url.toString());
+            setModule('guesser');
+        }
     }, []);
 
     return <div>

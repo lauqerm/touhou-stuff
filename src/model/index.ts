@@ -212,7 +212,6 @@ export const LetterMap = LetterList.reduce<Record<string, { letter: string, posi
     },
     {},
 );
-console.log("🚀 ~ LetterMap:", LetterMap);
 export const JoinedLetterList = LetterList.join('');
 
 export type LetterData = {
