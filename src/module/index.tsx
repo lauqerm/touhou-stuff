@@ -267,9 +267,9 @@ export const GuesserModule = () => {
             <AnswerLetter letter="H" status={0} compact />
             <div className="legend-entry">The letter "H" is correct</div>
             <AnswerLetter letter="H" status={1} compact />
-            <div className="legend-entry">The correct letter is ahead the letter "H" ("A", "D", "E", etc...)</div>
+            <div className="legend-entry">The correct letter is before the letter "H" ("A", "D", "E", etc...)</div>
             <AnswerLetter letter="H" status={-1} compact />
-            <div className="legend-entry">The correct letter is behind the letter "H" ("I", "M", "Q", etc...)</div>
+            <div className="legend-entry">The correct letter is after the letter "H" ("I", "M", "Q", etc...)</div>
         </HowToPlayContainer>
         <br />
         <GuesserHistory historyList={historyList} />
